@@ -1,0 +1,31 @@
+.card{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.colorBoton{
+    color: white;
+    background-color:  #c6a992;
+}
+
+.colorBoton:hover{
+    background-color:  #b48157;
+    color: white;
+}
+
+.menu {
+    background-color: #c6a992;
+    font-family: "IM Fell DW Pica", serif; }
+    .menu ul li {
+      margin: 10px 5px 10px 5px;
+      font-size: 1.4rem;}
+    .menu ul li:hover {
+      color: black; }
+
+h1{
+    font-family: 'IM Fell DW Pica', serif;
+  color: #c6a992;
+  font-size: 3.6rem;
+  text-align: center;
+  margin: 3rem auto; }
