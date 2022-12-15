@@ -1,0 +1,50 @@
+[
+    {
+        "id":1,
+        "nombre": "Buzo 'Saturn'", 
+        "Precio":6000,
+        "img": "img/img1.jpeg"
+    },
+    {
+        "id":2,
+        "nombre": "Buzo 'Folk song'",
+        "Precio":6000,
+        "img": "img/img2.jpeg"
+    },
+    {
+        "id":3, 
+        "nombre": "Buzo 'Folklore'", 
+        "Precio":5500, 
+        "img": "img/img3.jpeg"
+    },
+    {
+        "id":4,
+        "nombre": "Buzo 'Seven'",
+        "Precio":6000, 
+        "img": "img/img4.jpeg"
+    },
+    {
+        "id":5, 
+        "nombre": "Buzo 'August'", 
+        "Precio":6000, 
+        "img": "img/img5.jpeg"
+    },
+    {
+        "id":6,
+        "nombre": "Buzo 'Cage'", 
+        "Precio":6000,  
+        "img": "img/img6.jpeg"
+    },
+    {
+        "id":7,
+        "nombre": "Buzo 'Ivy'", 
+        "Precio":6000,  
+        "img": "img/img7.jpeg"
+    },
+    {
+        "id":8,
+        "nombre": "Buzo 'Cursed'", 
+        "Precio":500,  
+        "img": "img/img8.jpeg"
+    }
+]

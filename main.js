@@ -1,4 +1,8 @@
-class Producto {
+let carrito = [];
+let productos = [];
+let gestor;
+
+/*class Producto {
     constructor(id, nombre, precio, img){
         this.id = id;
         this.nombre = nombre;
@@ -6,28 +10,36 @@ class Producto {
         this.img = img;
         this.cantidad = 1;
     }
-}
-
-const sueter = new Producto(1, "Sueter 'Cardigan'", 4500, "img/sueter.png");
-const buzoFolklore = new Producto(2, "Buzo 'Folklore'", 5500, "img/buzoFolk.png");
-const totebagExile = new Producto(3, "Totebag 'Exile'", 1500, "img/totebagEx.png");
-const buzoAugust = new Producto(4, "Buzo 'August'", 5500, "img/buzoAug.png");
-const remeraFolklore = new Producto(5, "Remera 'Folklore'", 2000, "img/remeraFolk.png");
-const remeraSeven = new Producto(6, "Remera 'Seven'", 2000, "img/remeraSev.png");
-const buzoHoax = new Producto(7, "Buzo 'Hoax'", 4500, "img/buzoHoax.png");
-const cd = new Producto(8, "CD", 4700, "img/cd.png");
-
-const productos = [sueter, buzoFolklore, totebagExile, buzoAugust, remeraFolklore, remeraSeven, buzoHoax, cd];
-
-let carrito = [];
-
-if(localStorage.getItem("carrito")) {
+} 
+*/
+/*if(localStorage.getItem("carrito")) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
-}
+}*/
 
+const listadoProductos = "json/productos.json";
 const contenedorProductos = document.getElementById("contenedorProductos");
 
-const mostrarProductos = () => {
+document.addEventListener('DOMContentLoaded', () => {
+    carrito = JSON.parse( localStorage.getItem('carrito') ) || [];
+    gestor = new gestorProductos();
+    gestor.iniciar();
+}) 
+
+function agregarAlCarrito (id){
+    let card = document.querySelector('#row_'+ id);
+    let producto = new Producto (   id,
+                                card.querySelector('h3').textContent,
+                                card.querySelector('p').textContent,
+                                card.querySelector('img').src
+                                );
+    gestor.agregCarrito(producto);
+}
+
+function eliminarProd(id) {
+	gestor.eliminarProducto(id);
+}
+
+/*const mostrarProductos = () => {
     productos.forEach((producto) =>{
         const card = document.createElement("div");
         card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
@@ -51,7 +63,7 @@ const mostrarProductos = () => {
 }
 
 const agregarAlCarrito = (id) => {
-    const producto = productos.find((producto) =>producto.id === id);
+    const producto = productos.find((producto) => producto.id === id);
     const productoEnCarrito = carrito.find((producto) => producto.id === id);
     if (productoEnCarrito){
         productoEnCarrito.cantidad++;
@@ -60,9 +72,9 @@ const agregarAlCarrito = (id) => {
         localStorage.setItem("carrito",JSON.stringify(carrito));
     }
     calcularTotal();
-}
+} 
 
-mostrarProductos();
+//mostrarProductos();
 
 const contenedorCarrito = document.getElementById("contenedorCarrito");
 
@@ -82,7 +94,7 @@ const mostrarCarrito = () => {
                 <img src="${producto.img}" class="card-img-top imgProductos alt="${producto.nombre}">
                 <div class="card-body">
                 <h5 class="card-tittle"> ${producto.nombre} </h5>        
-                <p class="card-text"> ${producto.precio} </p>
+                <p class="card-text"> ${producto.Precio} </p>
                 <button class="btn colorBoton" id="eliminar${producto.id}"> Eliminar producto </button>
                 </div>
             </div>
@@ -128,4 +140,4 @@ const calcularTotal = ()=>{
     })
     total.innerHTML = `$${totalCompra}`;
 }
-
+*/

@@ -1,7 +1,8 @@
-.card{
+.estilosCard{
     display: flex;
     align-items: center;
-    margin: 0.5rem;
+    margin: 5rem; 
+    margin-top:15rem ;
 }
 
 .colorBoton{
@@ -15,17 +16,12 @@
 }
 
 .menu {
-    background-color: #c6a992;
-    font-family: "IM Fell DW Pica", serif; }
-    .menu ul li {
-      margin: 10px 5px 10px 5px;
-      font-size: 1.4rem;}
-    .menu ul li:hover {
-      color: black; }
+    background-color: #c6a992; }
 
 h1{
     font-family: 'IM Fell DW Pica', serif;
-  color: #c6a992;
+  color: #604d3c;
   font-size: 3.6rem;
   text-align: center;
   margin: 3rem auto; }
+
